@@ -167,7 +167,7 @@ struct V2rayOutboundBlackholeResponse: Codable {
 
 struct V2rayOutboundFreedom: Codable {
     // Freedom
-    var domainStrategy: String = "AsIs"// UseIP | AsIs
+    var domainStrategy: String = "UseIP"// UseIP | AsIs
     var redirect: String?
     var userLevel: Int = 0
 }
@@ -196,7 +196,7 @@ struct V2rayOutboundSocks: Codable {
 struct V2rayOutboundSockServer: Codable {
     var address: String = ""
     var port: Int = 0
-    var users: [V2rayOutboundSockUser] = [V2rayOutboundSockUser()]
+    var users: [V2rayOutboundSockUser]?
 }
 
 struct V2rayOutboundSockUser: Codable {
